@@ -1,7 +1,8 @@
 const repeatString = function(string, num) {
 
-    isNegative = num < 0;
-    isNotNumber = isNaN(num)
+    let isNegative = num < 0;
+    let isNotNumber = isNaN(num)
+    
     if (isNegative || isNotNumber) {
         return 'ERROR';
     }
