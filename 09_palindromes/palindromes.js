@@ -1,11 +1,12 @@
 const palindromes = function (word) {
-    const arrayWord = Array.from(word);
+    let cleanWord = word.replace(/[^a-z0-9]/gi, '').toUpperCase();
+    const arrayWord = Array.from(cleanWord);
     let palindrome = arrayWord.reduceRight((finalWord, character) => {
         finalWord += character;
         return finalWord;
     }, '');
 
-    return palindrome === word;
+    return palindrome === cleanWord;
 };
 
 // Do not edit below this line
